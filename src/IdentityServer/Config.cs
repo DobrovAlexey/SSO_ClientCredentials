@@ -16,43 +16,11 @@ namespace IdentityServer
             };
 
         public static IEnumerable<ApiScope> ApiScopes =>
-            new List<ApiScope>
-            {
-                new ApiScope("api1", "My API"),
-                new ApiScope("api2", "My API 2"),
-                new ApiScope("test", "My Test")
-            };
+            new ApiScope[]
+            { };
 
         public static IEnumerable<Client> Clients =>
-            new List<Client>
-            {
-                new Client
-                {
-                    ClientId = "client",
-
-                    AllowedGrantTypes = GrantTypes.ClientCredentials,
-
-                    ClientSecrets =
-                    {
-                        new Secret("secret".Sha256())
-                    },
-
-                    AllowedScopes = { "api1" }
-                },
-                
-                new Client
-                {
-                    ClientId = "client2",
-
-                    AllowedGrantTypes = GrantTypes.ClientCredentials,
-
-                    ClientSecrets =
-                    {
-                        new Secret("secret".Sha256())
-                    },
-
-                    AllowedScopes = { "api2", "test" }
-                }
-            };
+            new Client[] 
+            { };
     }
 }
