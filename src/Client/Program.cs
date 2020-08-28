@@ -25,9 +25,9 @@ namespace Client
             {
                 Address = disco.TokenEndpoint,
 
-                ClientId = "client2",
+                ClientId = "client",
                 ClientSecret = "secret",
-                Scope = "test"
+                Scope = "api1"
             });
 
             if (tokenResponse.IsError)
